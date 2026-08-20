@@ -122,6 +122,8 @@ Ve directamente a la sección [¿Cómo hacer este repositorio tuyo?](#cómo-hace
 
 ## Paso 4 — Simular con Wokwi
 
+![Vista previa del circuito simulado en Wokwi](assets/preview.png)
+
 1. Abre la carpeta del proyecto en VS Code:  
    `Archivo → Abrir Carpeta...` → selecciona la carpeta del proyecto
 
@@ -265,6 +267,5 @@ Este repositorio está diseñado como **punto de partida**. Para cada nueva prá
 <div align="center">
 
 **UETS — Soporte Técnico**  
-*Materia: Sistemas Embebidos / Programación de Microcontroladores*
 
 </div>
