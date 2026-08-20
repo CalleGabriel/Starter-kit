@@ -23,7 +23,7 @@
       "type": "wokwi-breadboard",
       "id": "bb3",
       "top": 293,
-      "left": 61.6,
+      "left": 157.6,
       "rotate": 90,
       "attrs": {}
     },
@@ -32,7 +32,7 @@
       "type": "wokwi-led",
       "id": "led1",
       "top": 162.4,
-      "left": 352.2,
+      "left": 448.2,
       "rotate": 90,
       "attrs": { "color": "red", "flip": "1", "label": "LED (GPIO2)" }
     },
@@ -40,24 +40,24 @@
       "type": "wokwi-resistor",
       "id": "r1",
       "top": 216,
-      "left": 316.25,
+      "left": 412.25,
       "rotate": 90,
-      "attrs": { "value": "1000", "label": "1k\u03a9" }
+      "attrs": { "value": "330", "label": "330Ω" }
     },
     {
       "type": "wokwi-text",
       "id": "text1",
-      "top": 422.4,
-      "left": 96,
+      "top": -57.6,
+      "left": -105.6,
       "attrs": {
-        "text": "=== Practica 1: LED Blink ===\nCircuito: ESP32 -> R(1k\u03a9) -> LED rojo -> GND\nPin de control: GPIO 2 (D2)\nFrecuencia: 1 parpadeo por segundo (500ms ON / 500ms OFF)\nVer src/led_blink.ino para el codigo fuente."
+        "text": "=== Practica 1: LED Blink ===\nCircuito: ESP32 -> R(1kΩ) -> LED rojo -> GND\nPin de control: GPIO 2 (D2)\nFrecuencia: 1 parpadeo por segundo (500ms ON / 500ms OFF)\nVer src/led_blink.ino para el codigo fuente."
       }
     },
     {
       "type": "wokwi-text",
       "id": "text2",
-      "top": 95,
-      "left": -230,
+      "top": 422.4,
+      "left": -278.4,
       "attrs": {
         "text": "Protoboard izquierda\n(pines lado A del ESP32)\nGPIOs: 12,13,14,25,26,27,32,33,34,35\n3V3 | EN | VP | VN | GND"
       }
@@ -65,8 +65,8 @@
     {
       "type": "wokwi-text",
       "id": "text3",
-      "top": 95,
-      "left": -30,
+      "top": 432,
+      "left": 38.4,
       "attrs": {
         "text": "Protoboard derecha\n(pines lado B del ESP32)\nGPIOs: 0,2,4,5,15,16,17,18,19,21,22,23\nTX | RX | GND"
       }
@@ -74,10 +74,10 @@
     {
       "type": "wokwi-text",
       "id": "text4",
-      "top": 270,
-      "left": 75,
+      "top": 537.6,
+      "left": 38.4,
       "attrs": {
-        "text": "Protoboard circuito\nLED rojo + Resistencia 1k\u03a9\nSenal: GPIO2 -> R1 -> LED -> GND"
+        "text": "Protoboard circuito\nLED rojo + Resistencia 330Ω\nSenal: GPIO2 -> R1 -> LED -> GND"
       }
     }
   ],
@@ -94,6 +94,8 @@
     [ "bb2:tp.1", "bb3:bp.1", "red", [ "v0" ] ],
     [ "bb2:tn.2", "bb3:bn.2", "black", [ "h0" ] ],
     [ "bb1:17t.b", "bb1:bn.14", "black", [ "h0" ] ],
+    [ "bb3:17b.j", "bb3:bn.13", "black", [ "h0" ] ],
+    [ "led1:A", "bb2:18b.h", "blue", [ "h-240" ] ],
     [ "esp:12", "bb1:16t.a", "", [ "$bb" ] ],
     [ "esp:13", "bb1:18t.a", "", [ "$bb" ] ],
     [ "esp:14", "bb1:15t.a", "", [ "$bb" ] ],
@@ -135,9 +137,7 @@
     [ "led1:A", "bb3:10b.h", "", [ "$bb" ] ],
     [ "led1:C", "bb3:11b.h", "", [ "$bb" ] ],
     [ "r1:1", "bb3:11b.i", "", [ "$bb" ] ],
-    [ "r1:2", "bb3:17b.i", "", [ "$bb" ] ],
-    [ "bb3:17b.j", "bb3:bn.13", "black", [ "h0" ] ],
-    [ "led1:A", "bb2:18b.h", "blue", [ "h-240" ] ]
+    [ "r1:2", "bb3:17b.i", "", [ "$bb" ] ]
   ],
   "dependencies": {}
 }
